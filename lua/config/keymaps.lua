@@ -1,7 +1,8 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
-vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +5<CR>")
-vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -5<CR>")
-vim.keymap.set("n", "<A-j>", "<cmd>resize +5<CR>")
-vim.keymap.set("n", "<A-k>", "<cmd>resize -5<CR>")
+-- Resize using <leader>w + h/j/k/l
+vim.keymap.set("n", "<leader>wj", "<cmd>resize +5<CR>", { desc = "Resize height +5" })
+vim.keymap.set("n", "<leader>wk", "<cmd>resize -5<CR>", { desc = "Resize height -5" })
+vim.keymap.set("n", "<leader>wh", "<cmd>vertical resize -5<CR>", { desc = "Resize width -5" })
+vim.keymap.set("n", "<leader>wl", "<cmd>vertical resize +5<CR>", { desc = "Resize width +5" })
